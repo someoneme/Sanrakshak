@@ -5,12 +5,11 @@ This project is a demonstration of real time graph of two different sensors moun
 Raspberry is used to take value from different sensors via arduino and upload the same on server in real time.
 ### Arduino(Gateway for sensor)
 Using serial monitor to take sensor data and publish onto pi COM Port.
-### Ultrasonic Sensor
+### Ultrasonic Sensor for prototype
 This sensor returns the distance of the object from the sensor using ultrasonic waves.
 ### IR
 It tells whether there is any obstacle infront of sensors or not. 
 ### Camera
 Used for live streaming.
-# Project Snap
+# Project Details
 This whole data can be viewed for development purpose in a web app or the final data can be viewd in Android Application
-![](snapshots/snap.gif)
