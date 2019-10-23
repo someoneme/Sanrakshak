@@ -1,5 +1,9 @@
 # Sanrakshak
 We at Sanrakshak have pledged to provide utmost safe and secure railway journey to our fellow passengers by attaching our robust and affordable sensors beneath the engine of the train which provides real time data about the occurrence of cracks or any kind of faults on the railway line and ultimately offers a holistic end to end solution to the government.
+
+## Problem
+1,394 train accidents were reported In India over the ten years and out of these accidents, 51% or 708 were due to derailments. Indian Railways has a mechanism in place for anti-collision of trains but still they don’t have any effective real time solution to predict cracks (main cause of derailment) in railway tracks
+
 ## Solution
 ● We are using two high-speed ultrasonic transducers on either side of the train engine to detect cracks on the railway lines.
 <br />
