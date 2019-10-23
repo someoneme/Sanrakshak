@@ -12,4 +12,4 @@ It tells whether there is any obstacle infront of sensors or not.
 ### Camera
 Used for live streaming.
 # Project Details
-This whole data can be viewed for development purpose in a web app or the final data can be viewd in Android Application
+This whole data can be viewed for development purpose in a web app or the final data can be viewd in Android Application.
