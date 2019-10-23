@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sensor Dashboard</title>
+  </div>
+  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/personal.css" />
+  <script src="/static/lib/jQuery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sensor Dashboard</a>
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" href="#"></a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-10">
+        <input class="form-control" placeholder="Command" type="text" id='command'>
+      </div>
+
+      <div class="col-2">
+        <div class="text-center">
+          <button class="btn btn-info btn-block" onclick="sendCommand()">Execute</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  
+<br>
+  <!-- Tables of data and location-->
+  <div class="container mt-2">
+    <div class="row">
+
+      <!-- Ultrasonic -->
+      <div class="col-lg-6 col-md-12">
+        <table class="table table-bordered gpsTable table-striped table-hover table-sm">
+          <thead class="thead-dark">
+            <tr class="bg-dark text-light">
+              <td colspan="2" align="center">Ultrasonic Sensor</td>
+            </tr>
+            <tr class="bg-dark text-light">
+              <td >Toggle Switch</td>
+              <td><input type="checkbox" unchecked name="ultrasonic_toggle" id="ultrasonic_toggle"></td>
+            </tr>
+            
+          </thead>
+            
+          <tbody>
+            <tr>
+              <td class='ultrasonicDataHeading' >Distance: </td>
+              <td class="ultrasonic_value" id='ultrasonic_value' align="center" width="20%"></td>
+            </tr>
+            <tr>
+              <td class='graph' colspan="2" height="100" align="center" >
+              	<button class="clear_data_button" onclick="clearDataUltrasonic()">Clear Data</button>
+
+
+              	<div id="ultrasonic_chart" style="height: 300px; width: 100%;"></div>
+
+
+
+              </td>
+              	
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- IR -->
+      
+      
+
+
+      <div class="col-lg-6 col-md-12 camera_class " width="100%">
+        <table class="table table-bordered gpsTable table-striped table-hover table-sm">
+          <thead class="thead-dark">
+            <tr class="bg-dark text-light">
+              <td colspan="2" align="center">Camera Feed</td>
+            </tr>
+            <tr class="bg-dark text-light">
+              <td >Toggle Switch</td>
+              <td><input type="checkbox" unchecked name="camera_toggle" id="camera_toggle" unchecked ></td>
+            </tr>
+            <tr class="">
+              <td colspan="2" align="center" id="camera_td">
+                <iframe src="" height="380px" width="680px" frameborder="0" ></iframe>
+              </td>
+            </tr>
+            </thead>
+            
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+    <div class="col-lg-12 col-md-12 crack">
+        <table class="table table-bordered crackTable table-striped table-hover table-sm">
+          <thead class="thead-dark">
+            <tr class="bg-dark text-light">
+              <td colspan="5" align="center">Cracks</td>
+            </tr>
+            <tr class="bg-dark text-light">
+              <td >S No.</td>
+              <td>Latitude</td>
+              <td>Longitude</td>
+              <td>Intensity</td>
+              <td>Snapshot</td>
+            </tr>
+            
+          </thead>
+            
+          <tbody id="crackTR">
+            
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+{% block body %}{% endblock %}
+</body>
+
+
+
+
+<script>
+
+</script>
+</html>

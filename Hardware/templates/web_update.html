@@ -1,0 +1,293 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+function captureCrack(inten){
+  document.getElementById("crackTR").innerHTML+="<tr><td>"+sno+"</td><td>"lat"</td><td>"lon"</td><td>"+inten+"</td><td><img src='http://192.168.43.21/?action=snapshot'></td></tr>";
+  sno = sno+1;
+}
+document.addEventListener('keydown', function(event) {
+
+  if (event.code == 'KeyR') {
+    captureCrack(1);
+    $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "3"},
+          
+  });
+    // alert('Undo!');
+  }
+});
+document.addEventListener('keydown', function(event) {
+  if (event.code == 'KeyW') {
+    $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "3"},
+          
+  });
+    // alert('Undo!');
+  }
+});
+document.addEventListener('keydown', function(event) {
+  if (event.code == 'KeyQ') {
+    $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "4"},
+          
+  });
+  }
+});
+
+document.addEventListener('keyup', function(event) {
+  if (event.code == 'KeyS') {
+    $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "5"},
+          
+  });
+  }
+});
+
+
+function sendCommand(){
+
+  // alert("asd");
+  var c = document.getElementById('command').value;
+  // alert(c);
+  $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: c},
+          
+  });
+
+}
+var sno = 0;
+var cnt_ultrasonic;
+var dps_ultrasonic=[];
+var options={};
+var dataLength_ultrasonic = 40;
+var chart_ultrasonic;
+
+var cnt_ultrasonic2;
+var dps_ultrasonic2=[];
+var options={};
+var dataLength_ultrasonic2 = 40;
+var chart_ultrasonic2;
+var flagg=0;
+var flaggg=0;
+var lat=0;
+var lon=0;
+
+
+window.onload = function() {
+
+
+cnt_ultrasonic=0;
+chart_ultrasonic = new CanvasJS.Chart("ultrasonic_chart", options = {
+  theme: "light2",
+  title: {
+    text: "Live Data"
+  },
+  data: [{
+    type: "line",
+    dataPoints: dps_ultrasonic
+  }]
+});
+
+
+cnt_ultrasonic2=0;
+chart_ultrasonic2 = new CanvasJS.Chart("ultrasonic2_chart", options = {
+  theme: "light2",
+  title: {
+    text: "Live Data"
+  },
+  data: [{
+    type: "spline",
+    dataPoints: dps_ultrasonic2
+  }]
+});
+
+}
+
+function addDataUltrasonic(data) {
+
+    if(data!="reset"){
+      if(data[1]>3.7 && flagg==0){
+        flagg=0;
+      }
+
+      else if(data[1]>3.7 && flagg==1){
+        var inten = data[1]-3.7;
+        flagg=0;
+        // captureCrack(inten);
+        
+        dps_ultrasonic.push({x: data[0], y: parseInt(data[1]*100), indexLabel:"Thermal Gap"});
+      }
+      else if(flagg==1){
+        flagg=0;
+        // flaggg=1;
+        dps_ultrasonic.push({x: data[0], y: parseInt(data[1]*100), indexLabel:"Crack"});
+      }
+      else{
+      // alert(data[0]);
+        dps_ultrasonic.push({x: data[0], y: parseInt(data[1]*100)});
+      }
+      if (dps_ultrasonic.length > dataLength_ultrasonic) {
+        dps_ultrasonic.shift();
+      }
+      chart_ultrasonic.render();
+    }
+    else{
+
+    }
+  
+}
+function clearDataUltrasonic(){
+      chart_ultrasonic=null;
+      dps_ultrasonic=[];
+      i=0;
+      chart_ultrasonic = new CanvasJS.Chart("ultrasonic_chart", options = {
+        theme: "light2",
+        title: {
+          text: "Live Data"
+        },
+        data: [{
+          type: "line",
+          dataPoints: dps_ultrasonic
+        }]
+      });
+      chart_ultrasonic.render();
+}
+
+
+function addDataUltrasonic2(data) {
+
+    if(data!="reset"){
+      // alert(data[0]);
+      dps_ultrasonic2.push({x: data[0], y: parseInt(data[1]*100)});
+      if (dps_ultrasonic2.length > dataLength_ultrasonic2) {
+        dps_ultrasonic2.shift();
+      }
+      chart_ultrasonic2.render();
+    }
+    else{
+
+    }
+  
+}
+function clearDataUltrasonic2(){
+      chart_ultrasonic2=null;
+      dps_ultrasonic2=[];
+      i=0;
+      chart_ultrasonic2 = new CanvasJS.Chart("ultrasonic2_chart", options = {
+        theme: "light2",
+        title: {
+          text: "Live Data"
+        },
+        data: [{
+          type: "line",
+          dataPoints: dps_ultrasonic2
+        }]
+      });
+      chart_ultrasonic2.render();
+}
+
+
+
+setInterval(function(){
+    if ($("input[id=ultrasonic_toggle]").is(":checked")) {
+        $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "1"},
+          success: function(response) {
+            cnt_ultrasonic++;
+            addDataUltrasonic([cnt_ultrasonic,response]);
+            $("#ultrasonic_value").html(response);
+          },
+          error: function(xhr) {
+          }
+        });
+    } else {
+            addDataUltrasonic("reset");
+            $("#ultrasonic_value").html("");
+        // alert("not checked");
+    }
+},10);
+setInterval(function(){
+    if ($("input[id=ultrasonic2_toggle]").is(":checked")) {
+        // alert("sad");
+        $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "2"},
+          success: function(response) {
+            // alert(response);
+            cnt_ultrasonic2++;
+            addDataUltrasonic2([cnt_ultrasonic2,response]);
+            $("#ultrasonic2_value").html(response);
+          },
+          error: function(xhr) {
+          }
+        });
+    } else {
+            addDataUltrasonic2("reset");
+            $("#ultrasonic2_value").html("");
+        // alert("not checked");
+    }
+},10);
+setInterval(function(){
+    cameraHTMLlink = "<iframe src='http://192.168.43.21/javascript_simple.html' height='380px' width='680px' frameborder='0' ></iframe>"
+    cameraHTMLblankLink = "<iframe src='' height='380px' width='680px' frameborder='0' ></iframe>"
+    $('input[id="camera_toggle"]').click(function(){
+      // alert("asda");
+    if ($("input[id=camera_toggle]").is(":checked")) {
+        $("#camera_td").html(cameraHTMLlink);
+    } else {
+        $("#camera_td").html(cameraHTMLblankLink);
+    }
+    });
+},1000);
+
+
+setInterval(function(){
+        $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "6"},
+          success: function(response) {
+            // alert(response);
+            lat = response;
+          },
+          error: function(xhr) {
+          }
+        });
+},10);
+
+setInterval(function(){
+        $.ajax({
+          url: "/private",
+          type: "get",
+          data: {jsdata: "7"},
+          success: function(response) {
+            // alert(response);
+            lon = response;
+          },
+          error: function(xhr) {
+          }
+        });
+},10);
+
+
+ 
+</script>
+
+</div>
+{% endblock %}
