@@ -19,4 +19,4 @@ end solution to the government.
 
 # Prototype 
 ![](Snaps/Product.gif)
-![](../Snaps/bot_1.jpg)
+![](Snaps/bot_1.jpg)
