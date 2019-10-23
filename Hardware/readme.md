@@ -9,8 +9,7 @@ Using serial monitor to take sensor data and publish onto pi COM Port.
 This sensor returns the distance of the object from the sensor using ultrasonic waves. In actual development phase, a special Panasonic laser sensor LS-300/LS-400 will be used. 
 ### Camera
 Used for live streaming. This will only be used for prototype phase.
-### Project Video Link
-youtube
+
 # Project Snap
 ![](../Snaps/bot_3.gif)
 # Bot Pics
