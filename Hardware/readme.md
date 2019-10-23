@@ -13,3 +13,6 @@ Used for live streaming. This will only be used for prototype phase.
 youtube
 # Project Snap
 ![](snapshots/snap.gif)
+# Bot Pics
+![](../Snaps/bot_1.jpg)
+![](../Snaps/bot_2.jpg)

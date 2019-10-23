@@ -19,6 +19,3 @@ end solution to the government.
 
 # Product GIF
 ![](Snaps/Product.gif)
-# Bot Pics
-![](Snaps/bot_1.jpg)
-![](Snaps/bot_2.jpg)
