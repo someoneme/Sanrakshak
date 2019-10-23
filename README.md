@@ -5,16 +5,13 @@ We at Sanrakshak have pledged to provide utmost safe and secure railway journey 
 1,394 train accidents were reported In India over the ten years and out of these accidents, 51% or 708 were due to derailments. Indian Railways has a mechanism in place for anti-collision of trains but still they don’t have any effective real time solution to predict cracks (main cause of derailment) in railway tracks
 
 ## Solution
-● We are using two high-speed ultrasonic transducers on either side of the train engine to detect cracks on the railway lines.
-<br />
-● Thermal gaps on the railway lines are often confused with cracks, so we are using a speedometer to precisely measure the speed and time for the occurrence of thermal gaps.
-<br />
-● Moreover, a high speed (>300 fps) camera is installed which records the data to effectively ensure the occurrence of cracks.
-<br />
-● Data given by the sensors and the camera is processed real time by an SOC (System on a Chip) possessing multicore server.
-<br />
-● We are using advance machine learning techniques to detect the authenticity of the crack bythe data provided by the sensors. The video footage of the railway lines along with the GPS coordinates is transferred to an android application and iOS application to a distant location.
++ We are using two high-speed ultrasonic transducers on either side of the train engine to detect cracks on the railway lines.
++ Thermal gaps on the railway lines are often confused with cracks, so we are using a speedometer to precisely measure the speed and time for the occurrence of thermal gaps.
++ Moreover, a high speed (>300 fps) camera is installed which records the data to effectively ensure the occurrence of cracks.
++ Data given by the sensors and the camera is processed real time by an SOC (System on a Chip) possessing multicore server.
++ We are using advance machine learning techniques to detect the authenticity of the crack bythe data provided by the sensors. The video footage of the railway lines along with the GPS coordinates is transferred to an android application and iOS application to a distant location.
 end solution to the government.
+
 ## Best Solution
 <br />
 ● Cracks on railway track don’t develop in a single day. These are developed over a period of time. Our technology helps to identify the cracks long before they become fatal and continuously send the GPS coordinate of the crack along with video footage to the nearest railway station or the railway master.
