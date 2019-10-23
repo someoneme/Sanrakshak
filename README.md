@@ -13,14 +13,12 @@ We at Sanrakshak have pledged to provide utmost safe and secure railway journey 
 end solution to the government.
 
 ## Best Solution
-<br />
-● Cracks on railway track don’t develop in a single day. These are developed over a period of time. Our technology helps to identify the cracks long before they become fatal and continuously send the GPS coordinate of the crack along with video footage to the nearest railway station or the railway master.
-<br />
-● We give a fully fledged product containing all the sensors along with the camera and SoC (System On a Chip) which can be directly attached beneath the engine of the train thus the entire system is physically inaccessible and provides utmost accuracy in detection of faults at the most affordable price.
++ Cracks on railway track don’t develop in a single day. These are developed over a period of time. Our technology helps to identify the cracks long before they become fatal and continuously send the GPS coordinate of the crack along with video footage to the nearest railway station or the railway master.
++ We give a fully fledged product containing all the sensors along with the camera and SoC (System On a Chip) which can be directly attached beneath the engine of the train thus the entire system is physically inaccessible and provides utmost accuracy in detection of faults at the most affordable price.
 
-# Project Video Link
+## Project Video Link
 youtube.com/to_be_updated
 
-# Prototype 
+## Prototype 
 ![](Snaps/Product.gif)
 ![](Snaps/bot_1.jpg)
