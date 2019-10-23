@@ -12,7 +12,7 @@ Used for live streaming. This will only be used for prototype phase.
 ### Project Video Link
 youtube
 # Project Snap
-![](snapshots/snap.gif)
+![](../Snaps/bot_3.gif)
 # Bot Pics
 ![](../Snaps/bot_1.jpg)
 ![](../Snaps/bot_2.jpg)
