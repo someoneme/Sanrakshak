@@ -21,6 +21,11 @@ end solution to the government.
 + Cracks on railway track don’t develop in a single day. These are developed over a period of time. Our technology helps to identify the cracks long before they become fatal and continuously send the GPS coordinate of the crack along with video footage to the nearest railway station or the railway master.
 + We give a fully fledged product containing all the sensors along with the camera and SoC (System On a Chip) which can be directly attached beneath the engine of the train thus the entire system is physically inaccessible and provides utmost accuracy in detection of faults at the most affordable price.
 
+## Download  
+**Sanrakshak Mobile Application** is packed with lot of features and provides you with details of the detected crack. Get your hands on it now. 
+
+[<img src="screenshots/download_button.png" width="200">](Mobile%20Application/Builds/Sanrakshak.apk?raw=true)
+
 ## Project Video Link
 [<p align="center"><img width="500px" alt="Sanrakshak Demonstration" src="https://i.ibb.co/pLjPQgz/https-i-ytimg-com-vi-DDny-K07-Cp5k-hqdefault.jpg"></p>](https://www.youtube.com/watch?v=DDnyK07Cp5k)
 
