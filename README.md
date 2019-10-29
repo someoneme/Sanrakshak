@@ -25,5 +25,4 @@ end solution to the government.
 [<p align="center"><img width="500" alt="Sanrakshak Demonstration" src="https://i.ibb.co/pLjPQgz/https-i-ytimg-com-vi-DDny-K07-Cp5k-hqdefault.jpg"></p>](https://www.youtube.com/watch?v=DDnyK07Cp5k)
 
 ## Prototype 
-![](Snaps/Product.gif)
-![](Snaps/bot_1.jpg)
+<img src="Snaps/Product.gif" width="33.333%"><img src="Snaps/bot_1.jpg" width="33.333%"><img src="Snaps/bot_2.jpg" width="33.333%">
