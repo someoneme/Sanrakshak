@@ -3,7 +3,7 @@ We at Sanrakshak have pledged to provide utmost safe and secure railway journey 
 
 Sanrakshak can be divided into three different fields
 - [Robot](Hardware/)
-- [Mobile Application](Mobile Application/)
+- [Mobile Application](Mobile%20Application/)
 - [Web Server](Backend/)
 
 ## Problem
