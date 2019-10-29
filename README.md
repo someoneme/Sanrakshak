@@ -31,4 +31,4 @@ end solution to the government.
 
 ## Prototype 
 <p align="center"><img src="Snaps/Product.gif" height = "330px">    <img src="Snaps/bot_2.jpg" height = "330px"></p>
-<p align="center"><img src="Snaps/bot_1.jpg" width="87%"></p>
+<p align="center"><img src="Snaps/bot_1.jpg" width="87.5%"></p>
