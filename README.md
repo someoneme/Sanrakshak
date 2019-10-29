@@ -23,8 +23,7 @@ end solution to the government.
 + We give a fully fledged product containing all the sensors along with the camera and SoC (System On a Chip) which can be directly attached beneath the engine of the train thus the entire system is physically inaccessible and provides utmost accuracy in detection of faults at the most affordable price.
 
 ## Project Video Link
-[![Sanrakshak Demonstration](https://i.ibb.co/pLjPQgz/https-i-ytimg-com-vi-DDny-K07-Cp5k-hqdefault.jpg)](https://www.youtube.com/watch?v=DDnyK07Cp5k "Sanrakshak Demonstration")
-https://youtu.be/DDnyK07Cp5k
+<div style="text-align:center"><img width="500" alt="Sanrakshak Demonstration" src="https://i.ibb.co/pLjPQgz/https-i-ytimg-com-vi-DDny-K07-Cp5k-hqdefault.jpg" href="https://www.youtube.com/watch?v=DDnyK07Cp5k"></div>
 
 ## Prototype 
 ![](Snaps/Product.gif)
