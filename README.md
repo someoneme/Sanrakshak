@@ -1,11 +1,10 @@
 # Sanrakshak
 We at Sanrakshak have pledged to provide utmost safe and secure railway journey to our fellow passengers by attaching our robust and affordable sensors beneath the engine of the train which provides real time data about the occurrence of cracks or any kind of faults on the railway line and ultimately offers a holistic end to end solution to the government. 
 
-Sanrakshak can be divided into four different fields
-- A Robot
-- A Mobile Application
-- A Web Application
-- A Web Server
+Sanrakshak can be divided into three different fields
+- [Robot](Hardware/)
+- [Mobile Application](Mobile%20Application/)
+- [Web Server](Backend/)
 
 ## Problem
 1,394 train accidents were reported In India over the ten years and out of these accidents, 51% or 708 were due to derailments. Indian Railways has a mechanism in place for anti-collision of trains but still they don’t have any effective real time solution to predict cracks (main cause of derailment) in railway tracks
@@ -23,7 +22,7 @@ end solution to the government.
 + We give a fully fledged product containing all the sensors along with the camera and SoC (System On a Chip) which can be directly attached beneath the engine of the train thus the entire system is physically inaccessible and provides utmost accuracy in detection of faults at the most affordable price.
 
 ## Project Video Link
-https://youtu.be/DDnyK07Cp5k
+<p align="center"><img width="500" alt="Sanrakshak Demonstration" src="https://i.ibb.co/pLjPQgz/https-i-ytimg-com-vi-DDny-K07-Cp5k-hqdefault.jpg" href="https://www.youtube.com/watch?v=DDnyK07Cp5k"></p>
 
 ## Prototype 
 ![](Snaps/Product.gif)
