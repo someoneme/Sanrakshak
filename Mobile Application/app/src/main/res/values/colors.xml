@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="colorAccentLight">#42a5f5</color>
+    <color name="colorAccentDark">#0091ea</color>
+    <color name="home_tap">#4FAAF3</color>
+    <color name="black">#000000</color>
+    <color name="green">#71DE56</color>
+    <color name="ripple">#64ffffff</color>
+
+    <color name="aws">#F8981D</color>
+    <color name="disabled">#c1c1c1</color>
+    <color name="profile">#6c6c6c</color>
+    <color name="profile_back">#82ffffff</color>
+    <color name="gender_back">#d1d1d1</color>
+    <color name="gender_male">#555555</color>
+    <color name="gender_female">#ff697f</color>
+    <color name="progress">#6c6c6c</color>
+</resources>

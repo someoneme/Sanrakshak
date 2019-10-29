@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="theme-color" content="#222222" />
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Sanrakshak - Add Cracks</title>
+	<link href="https://raw.githubusercontent.com/ItzzRitik/SanrakshakHome/master/assets/favicon.png" rel="icon" sizes="64x64" type="image/png">
+</head>
+<style>
+* {
+  	box-sizing: border-box;
+}
+
+html {
+  	font-family: 'Lato', sans-serif;
+}
+
+.section-form {
+	width: 37em;
+	margin: 3em auto;
+	background-color: #f3efe7;
+	padding: 2em;
+}
+.section-form .intro {
+  	margin-bottom: 2em;
+}
+.section-form h1 {
+	text-align: center;
+	font-size: 1.6em;
+	margin-bottom: 0.6em;
+}
+.section-form h2 {
+	text-align: center;
+	font-size: 1.23077em;
+}
+
+input[type=text] {
+	height: 45px;
+}
+
+input[type=text], textarea {
+	width: 100%;
+	margin-bottom: 1em;
+	font-size: .9em;
+	color: #cfcece;
+	font-weight: 300;
+	padding: .5em 1em;
+	border: none;
+	color: #555555;
+	font-weight: 300;
+}
+
+input[type=button] {
+	cursor: pointer;
+	margin: 10px 0 10px 0;
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	padding: .5em 2em;
+	background: #636363;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+</style>
+<body>
+    
+<div class="section-form">
+    <form method="post" action="#">
+        <div class="intro"> 
+            <h1>Sanrashak</h1>
+            <h2>Enter the Latitude and Longitude of Crack</h2>
+        </div>
+        <input type="text" value="" placeholder="Latitude and Longitude - @Lat,Lng" class="latlng" tabindex="1"/>
+        <input type="text" value="" placeholder="Intensity" class="intensity" tabindex="2"/>
+        <input type="button" value="Add Crack" class="submit" tabindex="2"/>
+    </form>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script>
+	$('.submit').click(function() {
+        let data = $('.latlng').val();
+        data = data.substring(data.indexOf('@')+1,data.length).replace(/ /g, '').split(',');
+		if(data[0] != "" && data[1] != "") {
+            swal.fire({
+				title: 'Please Wait',
+				text: 'Adding crack details into the server',
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                onOpen: () => { swal.showLoading(); }
+            });
+            const http = new XMLHttpRequest();
+            http.open('POST', '/addcrackweb');
+            http.setRequestHeader('Content-type', 'application/json');
+            http.onreadystatechange = function() {
+                if (http.readyState == XMLHttpRequest.DONE) {
+                    if(http.responseText == 1){
+                        swal.close();
+                        swal.fire({ 
+                            title: 'Yayy!!',
+                            text: 'Crack saved in server successfully',
+                            type: 'success',
+                            showConfirmButton: true
+                        });
+                    }
+                    else{
+                        swal.close();
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Error!',
+                            text: 'Unable to add crack details to server',
+                        });
+                    }
+                }
+            };
+            http.send(JSON.stringify({
+                x: data[0],
+                y: data[1],
+                i: $('.intensity').val()
+            }));
+        }
+        else{
+            Swal.fire({
+                type: 'error',
+                title: 'Error!',
+                text: 'Fields cannot be empty!!',
+            });
+        }
+    });	
+</script>
+</html>

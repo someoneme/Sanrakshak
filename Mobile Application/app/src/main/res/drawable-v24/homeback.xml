@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@color/colorPrimary" />
+<item>
+    <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@mipmap/swirl"
+        android:gravity="clip_horizontal"
+        android:tileMode="repeat" />
+</item>
+</layer-list>

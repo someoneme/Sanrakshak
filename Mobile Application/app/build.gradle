@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "in.sanrakshak.sanrakshak"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.asksira.android:cameraviewplus:0.9.5'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+    implementation 'com.rm:rmswitch:1.2.2'
+    implementation 'com.github.yalantis:ucrop:2.2.4'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+    implementation 'com.tomergoldst.android:tooltips:1.0.6'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.github.antonKozyriatskyi:CircularProgressIndicator:1.2.2'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation "com.hanks:htextview-base:0.1.6"
+    implementation "com.hanks:htextview-evaporate:0.1.6"
+
+    implementation 'com.google.api-client:google-api-client-android:1.22.0'
+    implementation 'com.google.apis:google-api-services-people:v1-rev63-1.22.0'
+
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
